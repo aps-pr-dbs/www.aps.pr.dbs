@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ME</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="page1.html">Home Page</a>
+        <h1>About Me</h1>
+        
+        <hr> <img src="../image/Author.jpg" alt="Aphisak Panrit's Profile" width="150" height="150" class="modal-trigger">
+        
+        <p>
+            My name is Aphisak Panrit
+            <br>I am 20 years old 
+            A passionate and detail-oriented Computer Science student from Bangkok University,
+            <br>currently seeking opportunities to apply my programming skills and problem-solving abilities. 
+            <br>My interests lie in software development, cybersecurity,AI. 
+            I am a quick learner and thrive in collaborative environments.</p>
+        
+        <hr> <h2>My Skills</h2> 
+        <div class="skill-list">
+            <h4>Technical Skills:</h4>
+            <ul> 
+                <li>Programming Languages: Python, Java, C++</li>
+                <li>Web Development: HTML, CSS, JavaScript</li>
+                <li>Database Management: SQL, DBLite</li>
+            </ul> 
+            
+            <h4>Soft Skills:</h4>
+            <ul>
+                <li>Problem-Solving</li>
+                <li>Team Collaboration</li>
+                <li>Effective Communication</li>
+                <li>Adaptability</li>
+            </ul>
+        </div>
+        
+        <hr> <h2>Education</h2>
+        <p>Bangkok University 
+            Bachelor's Degree in Computer Science
+            Expected Graduation: 2027
+        </p>
+        
+        <hr> <h2>Hobbies and interests</h2>
+        <p>Beyond my technical pursuits, I dedicate my free time to activities that enhance my personal growth and well-being. 
+            <br>I enjoy exercising to build endurance, reading to stay curious, and practicing meditation to improve my concentration. 
+            <br>On the technical side, I am passionate about coding personal projects, exploring new technologies, 
+            <br>and participating in hackathons, with a keen interest in cybersecurity and AI.
+        </p>
+        
+        <hr> <h2>My Certificate</h2>
+        
+        <div class="certificate-item">
+            <img src="../image/SCM.png" 
+                 alt="Oracle SCM Foundations" 
+                 class="modal-trigger"
+                 onclick="openModal('../image/SCM.png')"
+                 width="200" height="150">
+            <div class="cert-info">
+                <h4>Oracle Fusion Cloud Applications SCM Foundations Associate</h4>
+                <p>Issued by Oracle</p>
+                <p>Issued April 30, 2025 - No Expiration Date</p>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="certificate-item">
+            <img src="../image/CX.png" 
+                 alt="Oracle CX Foundations" 
+                 class="modal-trigger"
+                 onclick="openModal('../image/CX.png')"
+                 width="200" height="150">
+            <div class="cert-info">
+                <h4>Oracle Fusion Cloud Applications CX Certified Foundations Associate</h4>
+                <p>Issued by Oracle</p>
+                <p>Issued May 1, 2025 - No Expiration Date</p>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="certificate-item">
+            <img src="../image/ERP.png" 
+                 alt="Oracle ERP Foundations" 
+                 class="modal-trigger"
+                 onclick="openModal('../image/ERP.png')"
+                 width="200" height="150">
+            <div class="cert-info">
+                <h4>Oracle Fusion Cloud Applications ERP Certified Foundations Associate</h4>
+                <p>Issued by Oracle</p>
+                <p>Issued May 1, 2025 - No Expiration Date</p>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="certificate-item">
+            <img src="../image/HCM.png" 
+                 alt="Oracle HCM Foundations" 
+                 class="modal-trigger"
+                 onclick="openModal('../image/HCM.png')"
+                 width="200" height="150">
+            <div class="cert-info">
+                <h4>Oracle Fusion Cloud Applications HCM Certified Foundations Associate</h4>
+                <p>Issued by Oracle</p>
+                <p>Issued May 01 ,2025 - No Expiration Date</p>
+            </div>
+        </div>
+        <hr>
+        
+    </div> <div id="image-modal" class="modal">
+        <span class="close-btn">&times;</span> 
+        <img class="modal-content" id="modal-image" src="">
+    </div>
+
+    <script>
+        // รับองค์ประกอบ Modal, รูปภาพใน Modal, และปุ่มปิด
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeBtn = document.getElementsByClassName('close-btn')[0];
+
+        // ฟังก์ชันสำหรับเปิด Modal
+        function openModal(imageSrc) {
+            modal.style.display = "flex"; // แสดง Modal
+            modalImage.src = imageSrc;    // ตั้งค่ารูปภาพให้เป็นรูปที่ถูกคลิก
+        }
+
+        // ปิด Modal เมื่อคลิกที่ปุ่ม x
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // ปิด Modal เมื่อคลิกที่พื้นหลังสีดำ (ไม่ใช่ตัวรูปภาพ)
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
